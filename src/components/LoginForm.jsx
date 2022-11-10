@@ -14,17 +14,14 @@ function LoginForm({login, loginCredentials, setLoginCredentials}) {
     }
 
     return (
-
         <div>
-
-            <form onChange={onChange}
-            >
+            <form onChange={onChange}>
                 <h2>Login</h2>
-                <input placeholder="User Name" id="username" />
+                <input placeholder="Username" id="username" />
                 <input placeholder="Password" id="password" />
+                <br/>
                 <button onClick={performLogin}>Login</button>
             </form>
-
             <Outlet />
         </div>
     )

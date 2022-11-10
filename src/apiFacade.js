@@ -68,6 +68,11 @@ function apiFacade() {
         return fetch(URL + "/api/joke/haha", options).then(handleHttpErrors);
     }
 
+    const fetchCoctail =() => {
+        const options = makeOptions("GET")
+        return fetch(URL + "/api/coctail/getCoctail", options).then(handleHttpErrors)
+    }
+
     const getUserRoles = () =>
     {
         const token = getToken()
@@ -104,6 +109,7 @@ function apiFacade() {
     }
     return {
         fetchJoke,
+        fetchCoctail,
         makeOptions,
         setToken,
         getToken,

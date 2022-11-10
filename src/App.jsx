@@ -8,6 +8,7 @@ import GetJoke from "./components/GetJoke.jsx";
 import {Alert} from "react-bootstrap";
 import facade from "./apiFacade.js";
 import Footer from "./components/Footer.jsx";
+import Coctails from "./components/Coctails.jsx";
 
 function App() {
     //usestates her
@@ -26,17 +27,11 @@ function App() {
                                                         setErrorMessage={setErrorMessage}/>}/>
                     <Route path="joke" element={facade.hasUserAccess('user', loggedIn) ?
                         <GetJoke setErrorMessage={setErrorMessage}/> : <h4>Get back to work you lazy dog!</h4>}/>
-                    <Route
-                        path="*"
-                        element={
-                            <main style={{padding: "1rem"}}>
-                                <p>There's nothing here!</p>
-                            </main>
-                        }
-                    />
+                    <Route path="coctails" element={<Coctails/>}/>
+                    <Route path="*" element={<h1 className="not-found">Page Not Found</h1>}/>
                 </Routes>
-                <Alert variant="dark" style={{width: "42rem"}}>Status: {errorMessage}</Alert>
-                <Footer/>
+                {/*<Alert variant="dark" style={{width: "42rem"}}>Status: {errorMessage}</Alert>*/}
+                <Footer />
             </div>
         </BrowserRouter>
     );

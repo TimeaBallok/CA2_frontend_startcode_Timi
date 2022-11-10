@@ -7,18 +7,18 @@ function GetJoke({setErrorMessage}) {
     const [toggle, setToggle] = useState(false);
 
     useEffect(() => {
-        facade.fetchData("joke/haha", data=> setJokeFromServer(data.joke), setErrorMessage)
+        facade.fetchData("joke/haha", data => setJokeFromServer(data.joke), setErrorMessage)
     }, [toggle])
 
     const fetchJoke = () => {
         setToggle(!toggle);
     }
 
-
     return (
         <div>
-            <button onClick={fetchJoke}>Get Dem funny Jokes!</button>
-           <h2>This is a dad joke:</h2>
+            <button onClick={fetchJoke}>Get funny jokes!</button>
+            <br/><br/>
+            <h2>This is a dad joke:</h2>
             <h5>{jokeFromServer[0]}</h5> <br/><br/>
             <h2>This is a Chuck Norris joke:</h2>
             <h5>{jokeFromServer[1]}</h5>
