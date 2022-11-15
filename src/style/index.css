@@ -22,7 +22,11 @@ button{
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
+}
 
+button:hover {
+  background-color: mediumorchid;
+  color: white;
 }
 
 h1 {
@@ -106,33 +110,6 @@ nav a:hover,
   color: mediumorchid;
 }
 
-.workshops a {
-  font-weight: 500;
-  color: #605e5e;
-  text-decoration: none;
-  padding: 0.25em 0.4em;
-}
-.workshops a:hover,
-a.workshop-active {
-  color: #fff;
-  background-color: #605e5e;
-  border-radius: 3px;
-}
-
-.session a {
-  display: block;
-  color: rgb(56, 56, 56);
-  text-decoration: none;
-  border: 1px solid currentColor;
-  padding: 0.85em 1.125em;
-  border-radius: 3px;
-}
-
-.session a:hover,
-a.session-active {
-  color: #ff0e1c;
-}
-
 /* components & assets */
 
 .logo {
@@ -143,28 +120,6 @@ a.session-active {
   width: 100%;
   border-radius: 0.35em;
   margin-bottom: 2em;
-}
-
-.workshops {
-  margin-top: 2.5em;
-  margin-bottom: 1.5em;
-}
-
-ul.session-list {
-  display: flex;
-}
-
-.session + .session {
-  margin-left: 1.5em;
-}
-
-.session-name {
-  font-size: 1.125rem;
-  font-weight: bold;
-}
-
-.session p {
-  margin: 0;
 }
 
 form {
@@ -195,19 +150,21 @@ input[type=text]:focus {
 }
 
 input:focus {
-  outline-color: #ff0e1c;
+  outline-color: mediumpurple;
 }
 
 input[type="submit"] {
   cursor: pointer;
-  color: #fff;
+  color: mediumpurple;
   font-weight: bold;
   padding: 0.65em 0;
-  background-color: #ff0e1c;
+  background-color: lavender;
   border: none;
 }
+
 input[type="submit"]:hover {
-  background-color: #ff0e1c;
+  background-color: mediumpurple;
+  color: white;
 }
 
 /* layout */
@@ -223,6 +180,10 @@ header {
 
 .not-found {
   text-align: center;
+}
+
+.signUp {
+  margin-left: 260px;
 }
 
 .not-found::before {
@@ -264,6 +225,11 @@ header {
 .imgDetails {
   margin-right: 30px;
   margin-bottom: 100px;
+  float:left;
+  width:400px;
+}
+
+.imgDetails2 {
   float:left;
   width:400px;
 }

@@ -4,20 +4,6 @@ import facade from "../apiFacade.js";
 
 function Coctails({setErrorMessage}) {
 
-    // const [coctail, setCoctail] = useState("Loading...")
-    //
-    // const fetchCoctail = async (endpoint, setCoctail) => {
-    //     try {
-    //         const data = await fetch( "coctail/getCoctail")
-    //         const json = await data.json()
-    //
-    //         setCoctail(json)
-    //     }
-    //     catch (error) {
-    //         console.error(error)
-    //     }
-    // }
-
     const [coctail, setCoctail] = useState("Loading...")
 
     const [toggle, setToggle] = useState(false);

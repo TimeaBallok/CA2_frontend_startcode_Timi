@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import facade from "../apiFacade";
+import chucknorris from "../assets/chucknorris.jpg";
 
 function GetJoke({setErrorMessage}) {
     const [jokeFromServer, setJokeFromServer] = useState("Loading...")
@@ -22,6 +23,7 @@ function GetJoke({setErrorMessage}) {
             <h5>{jokeFromServer[0]}</h5> <br/><br/>
             <h2>This is a Chuck Norris joke:</h2>
             <h5>{jokeFromServer[1]}</h5>
+            <img className="imgDetails2" src={chucknorris} alt="Chuck Norris image"/>
         </div>
     )
 }

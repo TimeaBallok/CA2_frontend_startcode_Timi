@@ -13,7 +13,6 @@ function UserPage() {
             <h3>{dataFromServer}</h3>
         </div>
     )
-
 }
 
 export default UserPage;

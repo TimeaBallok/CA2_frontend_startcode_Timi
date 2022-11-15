@@ -1,5 +1,4 @@
 import React, {useState} from "react";
-import {Outlet} from "react-router-dom";
 
 function LoginForm({login, loginCredentials, setLoginCredentials}) {
     // const init = { username: "", password: "" };
@@ -22,7 +21,6 @@ function LoginForm({login, loginCredentials, setLoginCredentials}) {
                 <br/>
                 <button onClick={performLogin}>Login</button>
             </form>
-            <Outlet />
         </div>
     )
 
